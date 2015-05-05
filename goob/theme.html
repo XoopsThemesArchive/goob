@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="www.gooberhead.net" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<! -------------------------Start of Header ------------------------->
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="16%" background="<{$xoops_imageurl}>abovelogobg.gif"><img src="<{$xoops_imageurl}>spacer.gif" width="374" height="1"></td>
+    <td width="94"><img src="<{$xoops_imageurl}>abovelogo.gif" width="94" height="95"></td>
+    <td width="80%" background="<{$xoops_imageurl}>celltop.gif" valign="middle"><p align="center">Welcome to <{$xoops_sitename}> - <{$xoops_pagetitle}><br> Today is:
+    <script
+    type="text/javascript">
+<!--   // Array ofmonth Names
+var monthNames = new Array( "January","February","March","April","May","June","July","August","September","October","November","December");
+var now = new Date();
+thisYear = now.getYear();
+if(thisYear < 1900) {thisYear += 1900}; // corrections if Y2K display problem
+document.write(monthNames[now.getMonth()] + " " + now.getDate() + ", " + thisYear);
+// --></script>!!</td>
+    <td width="17%" background="<{$xoops_imageurl}>celltop.gif"></td>
+    <td width="206"><img src="<{$xoops_imageurl}>aendtop.gif" width="206" height="95"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="20%"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>logo.jpg" width="478" height="88" alt="<{$xoops_sitename}>"></a></td>
+    <td width="20%" background="<{$xoops_imageurl}>bg.jpg" valign="bottom"></td>
+    <td width="20%" background="<{$xoops_imageurl}>bg.jpg"></td>
+    <td width="20%" background="<{$xoops_imageurl}>bg.jpg"></td>
+    <td width="206"><img src="<{$xoops_imageurl}>aendmiddle.jpg" width="206" height="88"></td>
+  </tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%" background="<{$xoops_imageurl}>cellbottom.gif"><table border="0" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="100%" align="center"><table border="0" width="100%" cellspacing="0" cellpadding="0" background="<{$xoops_imageurl}>menubg.gif">
+        <tr>
+            <td width="16%" align="left"><img src="<{$xoops_imageurl}>navbarleft.jpg"></td>
+<! ---------------------Start of Top Menu Items  --------------------------------->
+            <td width="16%" align="center"><a href="<{$xoops_url}>/"><b>Home</b></a></td>
+            <td width="17%" align="center"><a href="<{$xoops_url}>/modules/newbb/"><b>Forums</b></td>
+            <td width="17%" align="center"><a href="<{$xoops_url}>/modules/mydownloads/"><b>Downloads</b></a></td>
+            <td width="17%" align="center"><a href="<{$xoops_url}>/modules/xoopsfaq/"><b>FAQ</b></a></td>
+            <td width="17%" align="center"><a href="<{$xoops_url}>/modules/contact/"><b>Contact</b></a></td>
+<! ---------------------End of Top Menu Items --------------------------------->
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+    <td width="94"><img src="<{$xoops_imageurl}>belowlogo.gif" width="94" height="105"></td>
+    <td width="206"><img src="<{$xoops_imageurl}>aendbottom.jpg" width="206" height="105"></td>
+  </tr>
+</table>
+<! ---------------------end of header --------------------------------->
+
+<! --------------------------Left Block------------->
+
+<table cellspacing="0" width="100%">
+    <tr>
+      <td id="leftcolumn" bgcolor="#000000">
+
+        <!-- Start left blocks loop -->
+        <{foreach item=block from=$xoops_lblocks}>
+          <{include file="goob/theme_blockleft.html"}>
+        <{/foreach}>
+        <!-- End left blocks loop -->
+
+      </td>
+<! --------------------------End of Left Block------------->
+
+      <td id="centercolumn" bgcolor="#000000">
+
+        <!-- Display center blocks if any -->
+        <{if $xoops_showcblock == 1}>
+
+        <table cellspacing="0">
+          <tr>
+            <td id="centerCcolumn" colspan="2">
+
+            <!-- Start center-center blocks loop -->
+            <{foreach item=block from=$xoops_ccblocks}>
+              <{include file="goob/theme_blockcenter_c.html"}>
+            <{/foreach}>
+            <!-- End center-center blocks loop -->
+
+            </td>
+          </tr>
+          <tr>
+            <td id="centerLcolumn">
+
+            <!-- Start center-left blocks loop -->
+              <{foreach item=block from=$xoops_clblocks}>
+                <{include file="goob/theme_blockcenter_l.html"}>
+              <{/foreach}>
+            <!-- End center-left blocks loop -->
+
+            </td><td id="centerRcolumn">
+
+            <!-- Start center-right blocks loop -->
+              <{foreach item=block from=$xoops_crblocks}>
+                <{include file="goob/theme_blockcenter_r.html"}>
+              <{/foreach}>
+            <!-- End center-right blocks loop -->
+
+            </td>
+          </tr>
+        </table>
+
+        <{/if}>
+        <!-- End display center blocks -->
+
+        <div id="content"><{$xoops_contents}></div>
+      </td>
+
+      <{if $xoops_showrblock == 1}>
+
+      <td id="rightcolumn" bgcolor="#000000">
+        <!-- Start right blocks loop -->
+        <{foreach item=block from=$xoops_rblocks}>
+          <{include file="goob/theme_blockright.html"}>
+        <{/foreach}>
+        <!-- End right blocks loop -->
+      </td>
+
+      <{/if}>
+
+    </tr>
+  </table>
+
+  <table cellspacing="0">
+    <tr id=footerbar>
+      <td><b><img src="<{$xoops_imageurl}>/dot.gif"><big><{$xoops_sitename}></a> - <{$xoops_pagetitle}></big><Script Language='Javascript'>
+<!--
+document.write(unescape('%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%77%77%77%2E%67%6F%6F%62%65%72%68%65%61%64%2E%6E%65%74%2F%22%3E'));
+//-->
+</Script><img src="<{$xoops_imageurl}>/dot.gif"></b></a><br>
+All trademarks used are properties of their respective owners. All rights reserved. <br>
+<{$xoops_meta_copyright}>
+Administration by <a href="<{$xoops_url}>/"><{$xoops_sitename}></a><br>
+<Script Language='Javascript'>
+<!--
+document.write(unescape('%20%20%20%20%20%20%20%54%68%65%6D%65%20%62%79%3A%20%3C%61%20%68%72%65%66%3D%22%68%74%74%70%3A%2F%2F%77%77%77%2E%67%6F%6F%62%65%72%68%65%61%64%2E%6E%65%74%22%3E%47%6F%6F%62%65%72%68%65%61%64%3C%2F%61%3E%20%20%20'));
+//-->
+</Script></td>
+    </tr>
+  </table>
+  <table>
+  </tr>
+</table>
+</body>
+</html>                                                                                                                                           
